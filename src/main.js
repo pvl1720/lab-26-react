@@ -35,7 +35,7 @@ class App extends React.Component {
         super(props);
         this.state = {
           content: 'I\'m a cow, not a squirrel!',
-          cow: SQUIRREL
+
         };
 
         this.handleCow = this.handleCow.bind(this);
@@ -43,7 +43,7 @@ class App extends React.Component {
 
     handleCow(e) {
       const content = faker.fake('{{lorem.sentence}}');
-      this.setState({content: faker.fake('My name is {{name.suffix}}, {{name.firstName}}, {{name.lastName}}') });
+      this.setState({content: faker.fake('My name is {{name.firstName}}, {{name.lastName}} {{name.suffix}}!') });
     }
 
 
