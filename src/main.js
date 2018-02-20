@@ -38,12 +38,10 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
           content: 'I\'m a cow, not a squirrel!',
           cow: SQUIRREL
         };
-
         this.handleCow = this.handleCow.bind(this);
     }
 
