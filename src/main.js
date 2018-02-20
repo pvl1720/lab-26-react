@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import superagent from 'superagent';
 import {say} from 'cowsay';
-import faker from 'faker';
 import './style/main.scss';
+// import faker from 'faker';
+const faker = require('faker');
+
 
 import { think, SQUIRREL } from 'cowsay';
 
@@ -14,6 +16,7 @@ console.log(think({
   tongue: ';;',
 }));
 
+console.log(faker.fake("{{name.lastName}}, {{name.firstName}} {{name.suffix}}"));
 
 class Header extends React.Component {
 
@@ -48,7 +51,7 @@ class App extends React.Component {
     handleCow(e) {
       // console.log('handle cow click me button');
       const content = faker.fake('{{lorem.sentence}}');
-      this.setState({content: Lorem.paragraph(2, true)});
+      this.setState({content: faker.fake('My name is {{name.suffix}}, {{name.firstName}}, {{name.lastName}}') });
     }
 
 
