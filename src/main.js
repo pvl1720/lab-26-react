@@ -25,7 +25,6 @@ class Header extends React.Component {
     return (
       <header>
         <h1>Generate Cowsay Lorem </h1>
-        // <button type="button">Click Button!</button>
       </header>
     )
   }
