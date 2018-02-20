@@ -13,8 +13,6 @@ console.log(think({
   tongue: ';;',
 }));
 
-console.log(faker.fake("{{name.lastName}}, {{name.firstName}} {{name.suffix}}"));
-
 class Header extends React.Component {
 
   constructor(props){
