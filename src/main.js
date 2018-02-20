@@ -6,9 +6,7 @@ import './style/main.scss';
 const faker = require('faker');
 import { think, SQUIRREL } from 'cowsay';
 
-
 class Header extends React.Component {
-
   constructor(props){
      super(props);
    }
@@ -20,32 +18,33 @@ class Header extends React.Component {
       </header>
     )
   }
-
 }
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          content: 'Once Iwas a cow, now a squirrel!',
+          content: 'Once I was a cow, now a squirrel!',
         };
-
         this.handleCow = this.handleCow.bind(this);
     }
 
     handleCow(e) {
-      this.setState({content: faker.fake('My name is {{name.firstName}}, {{name.lastName}} {{name.suffix}}! My role is {{name.jobDescriptor}}') });
+      this.setState({content: faker.fake('My name is {{name.firstName}}, {{name.lastName}} {{name.suffix}}! My role\'s {{name.jobDescriptor}}') });
     }
-
 
     render() {
         return (
             <div>
                 <Header />
                 <div id="root">
-                  <button onClick={this.handleCow}>Click the Button!</button>
+                  <button onClick={this.handleCow}>Click Da Button!</button>
                   <pre>
-                {think({ text: this.state.content, cow: SQUIRREL, eyes: 'QQ'})}
+                {think({
+                  text: this.state.content,
+                  cow: SQUIRREL,
+                  eyes: 'QQ'
+                })}
               </pre>
                 </div>
             </div>
