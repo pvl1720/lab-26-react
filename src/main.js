@@ -6,12 +6,6 @@ import './style/main.scss';
 const faker = require('faker');
 import { think, SQUIRREL } from 'cowsay';
 
-console.log(think({
-  text: 'chillin in da browser',
-  cow: SQUIRREL,
-  eyes: 'DD',
-  tongue: ';;',
-}));
 
 class Header extends React.Component {
 
@@ -30,20 +24,17 @@ class Header extends React.Component {
 }
 
 class App extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
           content: 'I\'m a cow, not a squirrel!',
-
         };
 
         this.handleCow = this.handleCow.bind(this);
     }
 
     handleCow(e) {
-      const content = faker.fake('{{lorem.sentence}}');
-      this.setState({content: faker.fake('My name is {{name.firstName}}, {{name.lastName}} {{name.suffix}}!') });
+      this.setState({content: faker.fake('My name is {{name.firstName}}, {{name.lastName}} {{name.suffix}}! My role is {{name.jobDescriptor}}') });
     }
 
 
@@ -54,7 +45,7 @@ class App extends React.Component {
                 <div id="root">
                   <button onClick={this.handleCow}>Click the Button!</button>
                   <pre>
-                {say({ text: this.state.content})}
+                {think({ text: this.state.content, cow: SQUIRREL, eyes: 'QQ'})}
               </pre>
                 </div>
             </div>
