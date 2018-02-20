@@ -3,10 +3,7 @@ import ReactDom from 'react-dom';
 import superagent from 'superagent';
 import {say} from 'cowsay';
 import './style/main.scss';
-// import faker from 'faker';
 const faker = require('faker');
-
-
 import { think, SQUIRREL } from 'cowsay';
 
 console.log(think({
@@ -42,6 +39,7 @@ class App extends React.Component {
           content: 'I\'m a cow, not a squirrel!',
           cow: SQUIRREL
         };
+
         this.handleCow = this.handleCow.bind(this);
     }
 
