@@ -45,11 +45,9 @@ class App extends React.Component {
         };
 
         this.handleCow = this.handleCow.bind(this);
-        // this.updateState = this.updateState.bind(this);
     }
 
     handleCow(e) {
-      // console.log('handle cow click me button');
       const content = faker.fake('{{lorem.sentence}}');
       this.setState({content: faker.fake('My name is {{name.suffix}}, {{name.firstName}}, {{name.lastName}}') });
     }
@@ -60,7 +58,7 @@ class App extends React.Component {
             <div>
                 <Header />
                 <div id="root">
-                  <button onClick={this.handleCow}>Click Button!</button>
+                  <button onClick={this.handleCow}>Click the Button!</button>
                   <pre>
                 {say({ text: this.state.content})}
               </pre>
