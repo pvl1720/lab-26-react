@@ -30,7 +30,10 @@ class App extends React.Component {
     }
 
     handleCow(e) {
-      this.setState({content: faker.fake('My name is {{name.firstName}}, {{name.lastName}} {{name.suffix}}! My role\'s {{name.jobDescriptor}}') });
+      this.setState({content: faker.fake(
+        'My name is {{name.firstName}} {{name.lastName}} {{name.suffix}}! My role\'s {{name.jobDescriptor}} in {{name.jobArea}}'
+        ) 
+      });
     }
 
     render() {
